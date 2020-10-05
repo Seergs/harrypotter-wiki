@@ -1,22 +1,46 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled from "styled-components"
+import Page from "../components/page"
+import HouseCard from "../components/house-card"
+import SortingButton from "../components/sorting-hat-button"
+import mixins from "../theme/mixins"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const { flex, justifyAround } = mixins
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const HousesWrapper = styled.div`
+  ${flex};
+  ${justifyAround};
+  flex-wrap: wrap;
+  margin-top: 4rem;
+`
+const IndexPage = ({ data }) => {
+  const {
+    allHousesJson: { edges },
+  } = data
+  const housesData = edges.map(edge => edge.node.houseName)
+  return (
+    <Page>
+      <HousesWrapper>
+        {housesData.map(house => (
+          <HouseCard key={house} name={house} />
+        ))}
+      </HousesWrapper>
+      <SortingButton />
+    </Page>
+  )
+}
+
+export const pageQuery = graphql`
+  query HousePageQuery {
+    allHousesJson {
+      edges {
+        node {
+          houseName
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
