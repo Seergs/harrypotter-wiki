@@ -7,11 +7,6 @@ const Card = styled.div`
   background-color: white;
   border-radius: 3px;
   padding: 10px 3px;
-
-  &:nth-child(3),
-  &:nth-child(4) {
-    margin-top: 2rem;
-  }
 `
 const CardTitle = styled.div`
   font-size: 25px;

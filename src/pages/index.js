@@ -13,6 +13,7 @@ const HousesWrapper = styled.div`
   ${justifyAround};
   flex-wrap: wrap;
   margin-top: 4rem;
+  gap: 1rem;
 `
 const IndexPage = ({ data }) => {
   const {

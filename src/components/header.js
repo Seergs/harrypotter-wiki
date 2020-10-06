@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Hamburger from "./hamburger"
 import mixins from "../theme/mixins"
+import { Link } from "gatsby"
 
 const { justifyBetween, flex, itemsCenter } = mixins
 
@@ -12,7 +13,9 @@ const Wrapper = styled.header`
   padding: 10px 20px;
 `
 
-const LogoWrapper = styled.div``
+const LogoWrapper = styled(Link)`
+  text-decoration: none;
+`
 const Text = styled.span`
   color: white;
   font-size: 32px;
@@ -20,7 +23,7 @@ const Text = styled.span`
 
 const Header = () => (
   <Wrapper>
-    <LogoWrapper>
+    <LogoWrapper to="/">
       <svg
         width="120"
         height="auto"

@@ -19,6 +19,7 @@ const Button = styled.button`
   margin-top: 3rem;
   color: white;
   font-size: 18px;
+  cursor: pointer;
 `
 
 const StyledLink = styled(Link)`

@@ -15,6 +15,12 @@ const mixins = {
   justifyCenter: css`
     justify-content: center;
   `,
+  flexRow: css`
+    flex-direction: row;
+  `,
+  flexColumn: css`
+    flex-direction: column;
+  `,
 }
 
 export default mixins
