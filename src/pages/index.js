@@ -4,6 +4,8 @@ import Page from "../components/page"
 import HouseCard from "../components/house-card"
 import SortingButton from "../components/sorting-hat-button"
 import mixins from "../theme/mixins"
+import useModal from "../hooks/useModal"
+import Modal from "../components/modal"
 import { graphql } from "gatsby"
 
 const { flex, justifyAround } = mixins
@@ -16,19 +18,31 @@ const HousesWrapper = styled.div`
   gap: 1rem;
 `
 const IndexPage = ({ data }) => {
-  const {
-    allHousesJson: { edges },
-  } = data
-  const housesData = edges.map(edge => edge.node.houseName)
+  const [houseModal, openModal, closeModal] = useModal()
+
+  const houses = data.allHousesJson.edges.map(edge => edge.node)
+
   return (
-    <Page>
-      <HousesWrapper>
-        {housesData.map(house => (
-          <HouseCard key={house} name={house} />
-        ))}
-      </HousesWrapper>
-      <SortingButton />
-    </Page>
+    <>
+      <Page>
+        <HousesWrapper>
+          {houses.map(house => (
+            <HouseCard
+              key={house.houseName}
+              name={house.houseName}
+              onClick={() => openModal(house.houseName)}
+            />
+          ))}
+        </HousesWrapper>
+        <SortingButton />
+      </Page>
+      {houseModal ? (
+        <Modal
+          houseData={houses.find(house => house.houseName === houseModal)}
+          onClose={closeModal}
+        />
+      ) : null}
+    </>
   )
 }
 
@@ -38,6 +52,13 @@ export const pageQuery = graphql`
       edges {
         node {
           houseName
+          headHouse
+          ghost
+          founder
+          description
+          colors
+          mascot
+          values
         }
       }
     }

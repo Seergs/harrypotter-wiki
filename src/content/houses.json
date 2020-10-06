@@ -1,14 +1,42 @@
 [
   {
-    "houseName": "Gryffindor"
+    "houseName": "Gryffindor",
+    "values": ["courage", "bravery", "nerve", "chivalry"],
+    "mascot": "lion",
+    "colors": ["red", "gold"],
+    "headHouse": "Minerva McGonagall",
+    "ghost": "Sir Nicholas de Mimsy-Porpington",
+    "founder": "Godric Gryffindor",
+    "description": "The Gryffindor common room is in one of the castle's highest towers, and its entrance is on the seventh floor in the east wing of the castle and is guarded by a painting of The Fat Lady, who is garbed in a pink dress. She permits entry only after being given the correct password, as was established in the third book, when Sirius Black tried forcing entry into the tower, only to be blocked by The Fat Lady after he could not give the correct password. In the first book, Neville Longbottom tends to forget the password and must wait near the painting until other Gryffindors arrive to open the way"
   },
   {
-    "houseName": "Ravenclaw"
+    "houseName": "Ravenclaw",
+    "values": ["intelligence", "learning", "wisdom", "wit"],
+    "mascot": "eagle",
+    "colors": ["blue", "bronze"],
+    "headHouse": "Filius Flitwick",
+    "ghost": "Grey Lady",
+    "founder": "Rowena Ravenclaw",
+    "description": "The dormitories are in Ravenclaw Tower, on the west side of Hogwarts. The common room is round and filled with blue hangings and armchairs, has a domed ceiling painted with stars and features a replica statue of Rowena wearing her diadem. Harry also notes that Ravenclaws have a spectacular view of the surrounding mountains. A logical riddle must be solved to gain entry, whereas the Gryffindor and Slytherin common rooms only require a password (Hufflepuffs need to tap a barrel in the rhythm of Helga Hufflepuff), indicating that it may be easier for those students from other houses who possess a high degree of intelligence to enter this common room than others. Professor McGonagall, the head of the Gryffindor House, solves the riddle accurately."
   },
   {
-    "houseName": "Slytherin"
+    "houseName": "Slytherin",
+    "values": ["ambition", "cunning", "leadership", "resourcefulness"],
+    "mascot": "serpent",
+    "colors": ["green", "silver"],
+    "headHouse": "Severus Snape",
+    "ghost": "The Bloody Baron",
+    "founder": "Salazar Slytherin",
+    "description": "The Slytherin dormitories and common room are reached by speaking a password to a patch of bare stone wall in the dungeons, which causes a hidden door to open. The Slytherin common room is a long, low, dungeon-style room, under the Hogwarts Lake, furnished with green lamps and carved armchairs. The room is described in the second book as having a greenish glow. The Sorting Hat claims that blood purity is a factor in selecting Slytherins, although this is not mentioned until the fifth book. There is no reason to believe, however, that Muggle-born students are not sorted there, merely that pure-blooded students are more desirable to that house, as there are several examples of half-bloods in the house - such as Snape, Tom Riddle/Voldemort and Harry himself was only excluded from the house at his own insistence. In Deathly Hallows, a group of Snatchers claim that not many Mudbloods are sorted into Slytherin. When believing Harry to be dead and thinking that he has final victory in his grasp, Voldemort proclaims his intention to abolish the other three houses and force all Hogwarts students into Slytherin. This design is foiled by his defeat and death, after which Slytherin becomes more diluted in its blood purity, no longer remaining the pure-blood bastion it once was."
   },
   {
-    "houseName": "Huffelpuff"
+    "houseName": "Hufflepuff",
+    "values": ["hard work", "pattience", "justice", "loyalty"],
+    "mascot": "badger",
+    "colors": ["yellow", "black"],
+    "headHouse": "Pomona Sprout",
+    "ghost": "Fat Friar",
+    "founder": "Helga Hufflepuff",
+    "description": "The entrance to the Hufflepuff dormitories and common room entrance is concealed in a pile of large barrels in an alcove in the corridor that holds the kitchen. To enter, one must tap the barrel two from the bottom in the middle of the second row in the rhythm of Helga Hufflepuff. Unlike any other house, the Hufflepuff common room has a repelling device that douses the illegal entrant in vinegar if the wrong lid is tapped or the rhythm is wrong. The Hufflepuff common room is filled with yellow hangings and fat armchairs and it has little tunnels leading to the dormitories, all of which have perfectly round doors, like barrel tops"
   }
 ]

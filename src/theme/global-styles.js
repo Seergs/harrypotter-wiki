@@ -7,6 +7,7 @@ const globalStyles = createGlobalStyle`
         height: 100%;
         background-color: ${colors.purple};
         font-family: 'Ruluko', sans-serif;
+        overflow:hidden;
     }
 
     *,*:after, *:before {

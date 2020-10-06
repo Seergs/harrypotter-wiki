@@ -21,7 +21,7 @@ const Line = styled.div`
 `
 
 export default function Hamburger() {
-  const { isNavigationOpen, setIsNavigationOpen } = useNavigation()
+  const [isNavigationOpen, setIsNavigationOpen] = useNavigation()
 
   return (
     <>

@@ -13,9 +13,9 @@ const CardTitle = styled.div`
   text-align: center;
 `
 
-export default function HouseCard({ name }) {
+export default function HouseCard({ name, onClick }) {
   return (
-    <Card>
+    <Card onClick={onClick}>
       <CardTitle>{name}</CardTitle>
     </Card>
   )
