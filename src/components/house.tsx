@@ -2,9 +2,13 @@ import React from "react"
 import styled, { css } from "styled-components"
 import theme from "../theme/theme"
 import mixins from "../theme/mixins"
+import { AnimatePresence, motion } from "framer-motion"
 const { colors } = theme
 const { flex, justifyAround, justifyCenter, itemsCenter } = mixins
 
+const Wrapper = styled.div`
+  color: white;
+`
 const HouseName = styled.h4`
   text-align: center;
   font-size: 32px;
@@ -83,7 +87,11 @@ const Ghost = styled.div`
 `
 
 export default function House({ children }) {
-  return <div>{children}</div>
+  return (
+    <AnimatePresence>
+      <Wrapper>{children}</Wrapper>
+    </AnimatePresence>
+  )
 }
 
 House.Name = function ({ children }) {

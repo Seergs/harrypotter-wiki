@@ -43,8 +43,9 @@ const IndexPage = ({ data }) => {
         </HousesWrapper>
         <SortingButton />
       </Page>
-      {houseModal ? (
-        <Modal onClose={closeModal}>
+
+      <Modal isOpen={houseModal !== null} onClose={closeModal}>
+        {houseModal && (
           <House values={houseModal.values}>
             <House.Name>{houseModal.houseName}</House.Name>
             <House.Values values={houseModal.values} />
@@ -54,9 +55,9 @@ const IndexPage = ({ data }) => {
             <House.Mascot>{houseModal.mascot}</House.Mascot>
             <House.Colors colors={houseModal.colors} />
             <House.Ghost>{houseModal.ghost}</House.Ghost>
-          </House>{" "}
-        </Modal>
-      ) : null}
+          </House>
+        )}
+      </Modal>
     </>
   )
 }

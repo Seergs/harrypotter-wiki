@@ -1,29 +1,109 @@
 import React from "react"
-import ReactModal from "react-modal"
 import theme from "../theme/theme"
+import styled from "styled-components"
+import { motion, AnimatePresence } from "framer-motion"
 const { colors } = theme
 
-ReactModal.setAppElement("#___gatsby")
+const Overlay = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+`
+const Content = styled(motion.div)`
+  position: absolute;
+  overflow: scroll;
+  background-color: ${colors.ultraDarkPurple};
+  top: 2rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+`
 
-const modalStyles = {
-  overlay: {
-    backgroundColor: "rgba(0,0,0,.2)",
-  },
-  content: {
-    backgroundColor: colors.ultraDarkPurple,
-    border: 0,
-    top: "5rem",
-    bottom: "5rem",
-    left: "2rem",
-    right: "2rem",
-    color: "white",
-  },
+const CloseButton = styled.svg`
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  cursor: pointer;
+`
+
+export default function Modal({ isOpen, onClose, children }) {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <Overlay
+          variants={overlayVariants}
+          initial="initial"
+          animate="isOpen"
+          exit="close"
+        >
+          <Content variants={contentVariants}>
+            <CloseButton
+              onClick={onClose}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20.39 20.39"
+            >
+              <title>close</title>
+              <line
+                x1="19.39"
+                y1="19.39"
+                x2="1"
+                y2="1"
+                fill="none"
+                stroke={colors.gray}
+                strokeLinecap="round"
+                strokeMiterlimit="10"
+                strokeWidth="2"
+              />
+              <line
+                x1="1"
+                y1="19.39"
+                x2="19.39"
+                y2="1"
+                fill="none"
+                stroke={colors.gray}
+                strokeLinecap="round"
+                strokeMiterlimit="10"
+                strokeWidth="2"
+              />
+            </CloseButton>
+            {children}
+          </Content>
+        </Overlay>
+      )}
+    </AnimatePresence>
+  )
 }
 
-export default function Modal({ onClose, children }) {
-  return (
-    <ReactModal isOpen={true} onRequestClose={onClose} style={modalStyles}>
-      {children}
-    </ReactModal>
-  )
+const overlayVariants = {
+  initial: {
+    opacity: 0,
+  },
+  isOpen: {
+    opacity: 1,
+  },
+  close: {
+    opacity: 1,
+  },
+}
+const contentVariants = {
+  initial: {
+    y: "-100%",
+  },
+  isOpen: {
+    y: 0,
+  },
+  close: {
+    y: "-100%",
+    transition: {
+      stiffness: 2,
+    },
+  },
 }

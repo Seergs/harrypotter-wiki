@@ -7,6 +7,7 @@ const Card = styled.div`
   background-color: white;
   border-radius: 3px;
   padding: 10px 3px;
+  cursor: pointer;
 `
 const CardTitle = styled.div`
   font-size: 25px;
