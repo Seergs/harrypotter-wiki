@@ -143,7 +143,9 @@ House.Colors = function ({ colors }) {
       <HouseSubtitle>COLORS</HouseSubtitle>
       <Colors>
         {colors.map(color => (
-          <SingleColor colorCode={color}>{color}</SingleColor>
+          <SingleColor key={color} colorCode={color}>
+            {color}
+          </SingleColor>
         ))}
       </Colors>
     </>

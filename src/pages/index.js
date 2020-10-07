@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
         <SortingButton />
       </Page>
 
-      <Modal isOpen={houseModal !== null} onClose={closeModal}>
+      <Modal isOpen={houseModal} onClose={closeModal}>
         {houseModal && (
           <House values={houseModal.values}>
             <House.Name>{houseModal.houseName}</House.Name>
