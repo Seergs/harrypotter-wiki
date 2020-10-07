@@ -23,7 +23,7 @@ const Button = styled.button`
 `
 
 const StyledLink = styled(Link)`
-  color: ${colors.lightestPruple};
+  color: ${colors.lightestPurple};
   text-decoration: none;
   margin-left: 5px;
 `

@@ -6,6 +6,7 @@ import SortingButton from "../components/sorting-hat-button"
 import mixins from "../theme/mixins"
 import useModal from "../hooks/useModal"
 import Modal from "../components/modal"
+import House from "../components/house"
 import { graphql } from "gatsby"
 
 const { flex, justifyAround } = mixins
@@ -30,17 +31,31 @@ const IndexPage = ({ data }) => {
             <HouseCard
               key={house.houseName}
               name={house.houseName}
-              onClick={() => openModal(house.houseName)}
+              onClick={() =>
+                openModal(
+                  houses.find(
+                    singleHouse => singleHouse.houseName === house.houseName
+                  )
+                )
+              }
             />
           ))}
         </HousesWrapper>
         <SortingButton />
       </Page>
       {houseModal ? (
-        <Modal
-          houseData={houses.find(house => house.houseName === houseModal)}
-          onClose={closeModal}
-        />
+        <Modal onClose={closeModal}>
+          <House values={houseModal.values}>
+            <House.Name>{houseModal.houseName}</House.Name>
+            <House.Values values={houseModal.values} />
+            <House.Founder>{houseModal.founder}</House.Founder>
+            <House.Description>{houseModal.description}</House.Description>
+            <House.HeadHouse>{houseModal.headHouse}</House.HeadHouse>
+            <House.Mascot>{houseModal.mascot}</House.Mascot>
+            <House.Colors colors={houseModal.colors} />
+            <House.Ghost>{houseModal.ghost}</House.Ghost>
+          </House>{" "}
+        </Modal>
       ) : null}
     </>
   )
