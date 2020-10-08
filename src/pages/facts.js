@@ -4,6 +4,8 @@ import Lightning from "../assets/lightning.png"
 import theme from "../theme/theme"
 import mixins from "../theme/mixins"
 import styled, { css } from "styled-components"
+import useRandomFact from "../hooks/useRandomFact"
+import { graphql } from "gatsby"
 
 const { flex, flexColumn, justifyCenter } = mixins
 const { colors } = theme
@@ -21,7 +23,7 @@ const Fact = styled.div`
   ${justifyCenter};
   padding: 2rem 1rem;
   border-radius: 5px;
-  color: ${colors.lightestPurple};
+  color: ${colors.gray};
   margin-bottom: 2rem;
 `
 
@@ -49,18 +51,30 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-export default function facts({ uri }) {
+export default function Facts({ data, uri }) {
+  const facts = data.allFactsJson.edges.map(edge => edge.node.fact)
+  const { displayedFact, getRandomFact } = useRandomFact(facts)
   return (
     <Page path={uri}>
       <Title>Here you have a fun fact</Title>
       <Fact>
         <LightningImage src={Lightning} alt="lightning" isLeft />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odio
-        reprehenderit ipsum sapiente expedita blanditiis ex labore recusandae
-        repellat accusantium!
+        {displayedFact}
         <LightningImage src={Lightning} alt="lightning" isRight />
       </Fact>
-      <Button>Get a new fun fact</Button>
+      <Button onClick={getRandomFact}>Get a new fun fact</Button>
     </Page>
   )
 }
+
+export const pageQuery = graphql`
+  query MyQuery {
+    allFactsJson {
+      edges {
+        node {
+          fact
+        }
+      }
+    }
+  }
+`
