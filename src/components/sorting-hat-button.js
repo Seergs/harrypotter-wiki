@@ -14,7 +14,7 @@ const Button = styled.button`
   background-color: ${colors.lightPurple};
   margin: 0 auto;
   border: 0;
-  padding: 15px 5px;
+  padding: 15px 10px;
   border-radius: 2px;
   margin-top: 3rem;
   color: white;
@@ -95,12 +95,12 @@ export default function SortingHatButton() {
           </defs>
         </svg>
         <div>
-          Find out what house you belong to
+          Discover you house
           <StyledLink>here</StyledLink>
         </div>
       </Button>
       {isLoading ? (
-        <Loading>Loading your house...</Loading>
+        <Loading>Sorting you out...</Loading>
       ) : house ? (
         <Result>¡{house}!</Result>
       ) : null}
