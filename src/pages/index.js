@@ -18,14 +18,14 @@ const HousesWrapper = styled.div`
   margin-top: 4rem;
   gap: 1rem;
 `
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, uri }) => {
   const [houseModal, openModal, closeModal] = useModal()
 
   const houses = data.allHousesJson.edges.map(edge => edge.node)
 
   return (
     <>
-      <Page>
+      <Page path={uri}>
         <HousesWrapper>
           {houses.map(house => (
             <HouseCard

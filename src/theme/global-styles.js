@@ -6,7 +6,7 @@ const globalStyles = createGlobalStyle`
     body{
         height: 100%;
         background-color: ${colors.purple};
-        overflow:hidden;
+        overflow-x:hidden;
     }
 
     * {

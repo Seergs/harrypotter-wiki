@@ -6,11 +6,11 @@ import styled from "styled-components"
 const StyledPage = styled.div`
   padding: 1rem;
 `
-const Page = ({ children }) => {
+const Page = ({ children, path }) => {
   return (
     <StyledPage>
       <GlobalStyles />
-      <Header />
+      <Header path={path} />
       {children}
     </StyledPage>
   )

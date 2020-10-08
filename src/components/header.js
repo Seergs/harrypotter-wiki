@@ -21,7 +21,7 @@ const Text = styled.span`
   font-size: 32px;
 `
 
-const Header = () => (
+const Header = ({ path }) => (
   <Wrapper>
     <LogoWrapper to="/">
       <svg
@@ -52,7 +52,7 @@ const Header = () => (
       </svg>
       <Text>wiki</Text>
     </LogoWrapper>
-    <Hamburger />
+    <Hamburger path={path} />
   </Wrapper>
 )
 

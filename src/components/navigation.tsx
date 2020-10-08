@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import theme from "../theme/theme"
 import { motion, AnimatePresence } from "framer-motion"
 import mixins from "../theme/mixins"
@@ -28,16 +28,28 @@ const CloseButton = styled.button`
   margin-bottom: 3rem;
 `
 
-const LinkItem = styled(Link)`
+interface LinkItemProps {
+  $isActive: boolean
+}
+const LinkItem = styled(Link)<LinkItemProps>`
   display: block;
   text-align: center;
   color: white;
   font-size: 36px;
   margin-bottom: 2rem;
   text-decoration: none;
+  ${({ $isActive }) =>
+    $isActive &&
+    css`
+      color: ${colors.gray};
+    `}
 `
 
-export default function Navigation({ isNavigationOpen, setIsNavigationOpen }) {
+export default function Navigation({
+  isNavigationOpen,
+  setIsNavigationOpen,
+  path,
+}) {
   return (
     <AnimatePresence>
       {isNavigationOpen && (
@@ -68,18 +80,30 @@ export default function Navigation({ isNavigationOpen, setIsNavigationOpen }) {
               />
             </svg>
           </CloseButton>
-          <Navigation.Link path="/">houses</Navigation.Link>
-          <Navigation.Link path="/characters">character</Navigation.Link>
-          <Navigation.Link path="/spells">spells</Navigation.Link>
-          <Navigation.Link path="/facts">fun facts</Navigation.Link>
+          <Navigation.Link path="/" currentPath={path}>
+            houses
+          </Navigation.Link>
+          <Navigation.Link path="/characters" currentPath={path}>
+            characters
+          </Navigation.Link>
+          <Navigation.Link path="/spells" currentPath={path}>
+            spells
+          </Navigation.Link>
+          <Navigation.Link path="/facts" currentPath={path}>
+            fun facts
+          </Navigation.Link>
         </Menu>
       )}
     </AnimatePresence>
   )
 }
 
-Navigation.Link = function ({ path, children }) {
-  return <LinkItem to={path}>{children}</LinkItem>
+Navigation.Link = function ({ path, currentPath, children }) {
+  return (
+    <LinkItem to={path} $isActive={path === currentPath}>
+      {children}
+    </LinkItem>
+  )
 }
 
 const animations = {

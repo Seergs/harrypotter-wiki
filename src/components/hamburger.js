@@ -20,7 +20,7 @@ const Line = styled.div`
   }
 `
 
-export default function Hamburger() {
+export default function Hamburger({ path }) {
   const [isNavigationOpen, setIsNavigationOpen] = useNavigation()
 
   return (
@@ -33,6 +33,7 @@ export default function Hamburger() {
       <Navigation
         isNavigationOpen={isNavigationOpen}
         setIsNavigationOpen={setIsNavigationOpen}
+        path={path}
       />
     </>
   )
