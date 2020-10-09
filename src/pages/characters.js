@@ -1,16 +1,58 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
+import styled from "styled-components"
 import Page from "../components/page"
-import SEO from "../components/seo"
+import useAccordion from "../hooks/useAccordion"
+import Accordion from "../components/accordion"
 
-const SecondPage = () => (
-  <Page>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Page>
-)
+const Title = styled.h1`
+  margin-top: 2rem;
+  padding: 0 1rem;
+  color: white;
+  font-weight: normal;
+`
+const Subtitle = styled.h2`
+  color: white;
+  font-weight: normal;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+`
 
-export default SecondPage
+const Characters = ({ data, uri }) => {
+  const [openIndex, toggle] = useAccordion()
+  const allCharacters = data.allCharactersJson.edges.map(edge => edge.node)
+  return (
+    <Page path={uri}>
+      <Title>CHARACTERS</Title>
+      <Subtitle>(by last name)</Subtitle>
+      {allCharacters.map((keyArray, index) => (
+        <Accordion
+          data={keyArray.characters}
+          isOpen={openIndex === index}
+          toggle={toggle}
+          letter={keyArray.key}
+          key={keyArray.key}
+          index={index}
+        />
+      ))}
+    </Page>
+  )
+}
+
+export const pageQuery = graphql`
+  query CharactersPageQuery {
+    allCharactersJson {
+      edges {
+        node {
+          key
+          characters {
+            description
+            name
+          }
+        }
+      }
+    }
+  }
+`
+
+export default Characters
