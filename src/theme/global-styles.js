@@ -18,6 +18,22 @@ const globalStyles = createGlobalStyle`
         margin: 0;
         padding:0;
     }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${colors.lightestPurple};
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${colors.lightPurple};
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: ${colors.darkPurple};
+    }
 `
 
 export default globalStyles

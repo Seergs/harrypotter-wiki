@@ -20,6 +20,10 @@ const Button = styled.button`
   color: white;
   font-size: 18px;
   cursor: pointer;
+  transition: filter 0.2s linear;
+  &:hover {
+    filter: brightness(1.1);
+  }
 `
 
 const StyledLink = styled.span`

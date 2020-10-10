@@ -14,14 +14,16 @@ const Wrapper = styled.div`
   margin-bottom: 1rem;
 `
 
-const Title = styled(motion.div)`
-  background-color: ${colors.lightestPurple};
+const Title = styled(motion.button)`
+  width: 100%;
   padding: 0.8rem;
   ${flex};
   ${justifyBetween};
   ${itemsCenter};
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  color: white;
+  border: 0;
   cursor: pointer;
 `
 const Letter = styled.span`
@@ -54,6 +56,9 @@ export default function Accordion({ isOpen, toggle, title, data, index }) {
         initial={false}
         animate={{
           backgroundColor: isOpen ? colors.lightestPurple : colors.darkPurple,
+        }}
+        whileHover={{
+          backgroundColor: colors.lightPurple,
         }}
         onClick={() => toggle(index)}
       >

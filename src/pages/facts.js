@@ -49,6 +49,11 @@ const Button = styled.button`
   width: 100%;
   height: 52px;
   cursor: pointer;
+  transition: filter 0.1s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
 `
 
 export default function Facts({ data, uri }) {

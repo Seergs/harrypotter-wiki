@@ -27,6 +27,11 @@ const CloseButton = styled.button`
   border: 0;
   align-self: flex-end;
   margin-bottom: 3rem;
+  transition: transform 0.1s linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 interface LinkItemProps {
@@ -39,6 +44,12 @@ const LinkItem = styled(Link)<LinkItemProps>`
   font-size: 36px;
   margin-bottom: 2rem;
   text-decoration: none;
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   ${({ $isActive }) =>
     $isActive &&
     css`
