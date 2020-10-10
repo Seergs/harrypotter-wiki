@@ -14,6 +14,7 @@ const Menu = styled(motion.div)`
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   ${flex};
   ${flexColumn};
   background-color: ${colors.darkPurple};

@@ -1,0 +1,849 @@
+[
+  {
+    "key": "A",
+    "spells": [
+      {
+        "name": "Aberto",
+        "description": "opens objects"
+      },
+      {
+        "name": "Accio",
+        "description": "Summons an object"
+      },
+      {
+        "name": "Age Line",
+        "description": "Hides things from younger people"
+      },
+      {
+        "name": "Aguamenti",
+        "description": "shoots water from wand"
+      },
+      {
+        "name": "Alarte Ascendare",
+
+        "description": "shoots things high in the air"
+      },
+      {
+        "name": "Alohomora",
+        "description": "opens locked objects"
+      },
+      {
+        "name": "Anapneo",
+
+        "description": "clears the target's airway"
+      },
+      {
+        "name": "Anteoculatia",
+        "description": "turns head hair into antlers"
+      },
+      {
+        "name": "Anti-Cheating",
+
+        "description": "prevents cheating on exams"
+      },
+      {
+        "name": "Aparecium",
+
+        "description": "reveals invisible ink"
+      },
+      {
+        "name": "Apparate",
+
+        "description": "teleportation name"
+      },
+      {
+        "name": "Arania Exumai",
+
+        "description": "blasts away spiders"
+      },
+      {
+        "name": "Aqua Eructo",
+
+        "description": "shoots water from wand"
+      },
+      {
+        "name": "Arresto Momentum",
+
+        "description": "slows down objects"
+      },
+      {
+        "name": "Ascendio",
+
+        "description": "moves an object upward"
+      },
+      {
+        "name": "Avada Kedavra",
+        "description": "murders opponent"
+      },
+      {
+        "name": "Avifors",
+        "description": "turns small objects into birds"
+      },
+      {
+        "name": "Avis",
+
+        "description": "launches birds from your wand"
+      }
+    ]
+  },
+  {
+    "key": "B",
+    "spells": [
+      {
+        "name": "Babbling Curse ",
+        "description": "makes a person babble"
+      },
+      {
+        "name": "Bombarda",
+
+        "description": "causes explosions"
+      },
+      {
+        "name": "Bombarda Maxima",
+
+        "description": "causes large explosions"
+      },
+      {
+        "name": "Bubble Head",
+        "description": "puts a person's head in a protective air bubble"
+      }
+    ]
+  },
+  {
+    "key": "C",
+    "spells": [
+      {
+        "name": "Carpe Retractum",
+
+        "description": "shoots a rope from a wand to snag things"
+      },
+      {
+        "name": "Caterwauling",
+        "description": "detects enemies and emits a scream"
+      },
+      {
+        "name": "Cave Inimicum",
+        "description": "detects enemies and emits an alarm"
+      },
+      {
+        "name": "Cheering",
+        "description": "makes a person happy and giddy"
+      },
+      {
+        "name": "Cistem Aperio",
+
+        "description": "opens things"
+      },
+      {
+        "name": "Colloportus",
+
+        "description": "locks doors"
+      },
+      {
+        "name": "Colloshoo",
+
+        "description": "makes a person's shoes stick to the ground"
+      },
+      {
+        "name": "Colovaria",
+
+        "description": "makes an object change colour"
+      },
+      {
+        "name": "Confringo",
+
+        "description": "explode flames on target"
+      },
+      {
+        "name": "Confundus",
+
+        "description": "used to confuse opponent"
+      },
+      {
+        "name": "Conjunctivitis",
+
+        "description": "damages opponent's eyesight"
+      },
+      {
+        "name": "Cornflake Skin",
+
+        "description": "gives a person cereal skin"
+      },
+      {
+        "name": "Crucio",
+
+        "description": "tortures a person"
+      },
+      {
+        "name": "Cushioning",
+
+        "description": "helps cushon a fall"
+      }
+    ]
+  },
+  {
+    "key": "D",
+    "spells": [
+      {
+        "name": "Defodio",
+
+        "description": "dig out materials"
+      },
+      {
+        "name": "Deletrius",
+
+        "description": "counters Prior Incantato"
+      },
+      {
+        "name": "Densaugeo",
+
+        "description": "enlarges teeth"
+      },
+      {
+        "name": "Deprimo",
+
+        "description": "wind damaging name"
+      },
+      {
+        "name": "Depulso",
+
+        "description": "drives an object away"
+      },
+      {
+        "name": "Descendo",
+
+        "description": "moves an object downwards"
+      },
+      {
+        "name": "Diffindo",
+
+        "description": "splits seams"
+      },
+      {
+        "name": "Diminuendo",
+
+        "description": "shrinks the target"
+      },
+      {
+        "name": "Dissendium",
+
+        "description": "opens passageways"
+      },
+      {
+        "name": "Disillusionment",
+
+        "description": "makes the target blend into the surroundings"
+      },
+      {
+        "name": "Duro",
+
+        "description": "makes objects hard"
+      },
+      {
+        "name": "Drought",
+
+        "description": "dries up puddles"
+      }
+    ]
+  },
+  {
+    "key": "E",
+    "spells": [
+      {
+        "name": "Ears to Kumquats",
+
+        "description": "gives a person kumquat ears"
+      },
+      {
+        "name": "Ear Shriveling ",
+
+        "description": "cause a person's ear to shrivel"
+      },
+      {
+        "name": "Engorgio",
+
+        "description": "enlarges an item"
+      },
+      {
+        "name": "Ennervate",
+
+        "description": "counters Stupefy"
+      },
+      {
+        "name": "Entrail-Expelling",
+
+        "description": "expel entrails from a body"
+      },
+      {
+        "name": "Episkey",
+
+        "description": "heals minor injuries"
+      },
+      {
+        "name": "Epoximise",
+
+        "description": "binds objects together"
+      },
+      {
+        "name": "Erecto",
+
+        "description": "builds things"
+      },
+      {
+        "name": "Evanesco",
+
+        "description": "makes things vanish"
+      },
+      {
+        "name": "Everte Statum",
+
+        "description": "throws a victim backwards"
+      },
+      {
+        "name": "Expecto Patronum",
+
+        "description": "creates a Patronus"
+      },
+      {
+        "name": "Expelliarmus",
+
+        "description": "disarms your opponent"
+      },
+      {
+        "name": "Expulso",
+
+        "description": "makes objects explode"
+      },
+      {
+        "name": "Extinguishing",
+
+        "description": "puts out fires"
+      }
+    ]
+  },
+  {
+    "key": "F",
+    "spells": [
+      {
+        "name": "Ferula",
+
+        "description": "creates bandages"
+      },
+      {
+        "name": "Fianto Duri",
+
+        "description": "defensive charm"
+      },
+      {
+        "name": "Fidelius",
+
+        "description": "hides a secret within someone"
+      },
+      {
+        "name": "Fiendfyre",
+
+        "description": "hard to control large fire curse"
+      },
+      {
+        "name": "Finestra",
+
+        "description": "turns windows to dust"
+      },
+      {
+        "name": "Finite",
+
+        "description": "finishes name in the caster's area"
+      },
+      {
+        "name": "Finite Incantatum",
+
+        "description": "stops any current names"
+      },
+      {
+        "name": "Flagrante",
+
+        "description": "multiplies and burns objects upon touch"
+      },
+      {
+        "name": "Flagrate",
+
+        "description": "allows user to write on objects"
+      },
+      {
+        "name": "Flame Freezing",
+
+        "description": "makes flames cool"
+      },
+      {
+        "name": "Flipendo",
+
+        "description": "knocks an object backwards"
+      },
+      {
+        "name": "Flying",
+
+        "description": "makes objects fly"
+      },
+      {
+        "name": "Fumos",
+
+        "description": "a defensive cloud of smoke"
+      },
+      {
+        "name": "Furnunculus",
+
+        "description": "produces boils on opponent"
+      }
+    ]
+  },
+  {
+    "key": "G",
+    "spells": [
+      {
+        "name": "Geminio",
+
+        "description": "duplicates an object"
+      },
+      {
+        "name": "Glisseo",
+
+        "description": "turns stairs into ramps"
+      },
+      {
+        "name": "Gripping",
+
+        "description": "makes it easier to hold things"
+      }
+    ]
+  },
+  {
+    "key": "H",
+    "spells": [
+      {
+        "name": "Harmonia Nectere Passus",
+
+        "description": "mends broken things"
+      },
+      {
+        "name": "Homenum Revelio",
+
+        "description": "reveals humans nearby"
+      },
+      {
+        "name": "Homonculous",
+
+        "description": "lets a person track another's movement on a map"
+      },
+      {
+        "name": "Homorphus",
+
+        "description": "Lockhart's warewolf \"cure\""
+      },
+      {
+        "name": "Horcrux",
+
+        "description": "allows wizard to put their soul into an object"
+      }
+    ]
+  },
+  {
+    "key": "I",
+    "spells": [
+      {
+        "name": "Illegibilus",
+
+        "description": "makes text unreadable"
+      },
+      {
+        "name": "Immobulus",
+
+        "description": "renders target immobile"
+      },
+      {
+        "name": "Impedimenta",
+
+        "description": "slows an advancing object"
+      },
+      {
+        "name": "Imperio",
+
+        "description": "controls a person"
+      },
+      {
+        "name": "Impervius",
+
+        "description": "makes an object repel water"
+      },
+      {
+        "name": "Incarcerous",
+
+        "description": "ties someone up"
+      },
+      {
+        "name": "Incendio",
+
+        "description": "starts a fire"
+      }
+    ]
+  },
+  {
+    "key": "L",
+    "spells": [
+      {
+        "name": "Lacarnum Inflamarae",
+
+        "description": "shoots a fireball from caster's wand"
+      },
+      {
+        "name": "Langlock",
+
+        "description": "glues opponent's tongue to roof of mouth"
+      },
+      {
+        "name": "Legilimens",
+
+        "description": "allows caster to read the mind of the target"
+      },
+      {
+        "name": "Levicorpus",
+
+        "description": "hangs target upside down by feet"
+      },
+      {
+        "name": "Liberacorpus",
+
+        "description": "counter name to Levicorpus"
+      },
+      {
+        "name": "Locomotor Mortis",
+
+        "description": "locks opponent's legs"
+      },
+      {
+        "name": "Lumos",
+
+        "description": "creates light at wand tip"
+      },
+      {
+        "name": "Lumos Maxima",
+
+        "description": "creates ball of light that can brighten a room for a long period of time"
+      },
+      {
+        "name": "Lumos Solem",
+
+        "description": "creates a strong beam of light from the wand"
+      }
+    ]
+  },
+  {
+    "key": "M",
+    "spells": [
+      {
+        "name": "Meteolojinx Recanto",
+
+        "description": "causes weather description names to stop"
+      },
+      {
+        "name": "Mimblewimble",
+
+        "description": "tongue ties it's target"
+      },
+      {
+        "name": "Mobiliarbus",
+
+        "description": "moves objects with wand"
+      },
+      {
+        "name": "Mobilicorpus",
+
+        "description": "moves unconcious bodies"
+      },
+      {
+        "name": "Morsmorde",
+
+        "description": "conjures the dark mark"
+      },
+      {
+        "name": "Morsmorde",
+
+        "description": "prevents nearby people from listening to conversations"
+      }
+    ]
+  },
+  {
+    "key": "N",
+    "spells": [
+      {
+        "name": "Nox",
+
+        "description": "counter to Lumos, turns off light"
+      }
+    ]
+  },
+  {
+    "key": "O",
+    "spells": [
+      {
+        "name": "Oculus Reparo",
+
+        "description": "repairs eyeglasses"
+      },
+      {
+        "name": "Obliteration",
+
+        "description": "removes footprints"
+      },
+      {
+        "name": "Obliviate",
+
+        "description": "erases memories"
+      },
+      {
+        "name": "Obscuro",
+
+        "description": "blindfolds the victim"
+      },
+      {
+        "name": "Oppugno",
+
+        "description": "makes conjured items attack"
+      },
+      {
+        "name": "Orchideous",
+
+        "description": "conjures flowers"
+      }
+    ]
+  },
+  {
+    "key": "P",
+    "spells": [
+      {
+        "name": "Periculum",
+
+        "description": "makes fireworks from the wand tip"
+      },
+      {
+        "name": "Permanent Sticking",
+
+        "description": "causes items to permanently stick to things"
+      },
+      {
+        "name": "Petrificus Totalus",
+
+        "description": "body bind"
+      },
+      {
+        "name": "Piertotum Locomotor",
+
+        "description": "animates statues and suits of armor"
+      },
+      {
+        "name": "Point Me",
+
+        "description": "wand acts like a compass"
+      },
+      {
+        "name": "Portus",
+
+        "description": "makes an object a Portkey"
+      },
+      {
+        "name": "Priori Incantatem",
+
+        "description": "when sibling wands duel, the weaker wand shows all recently cast names"
+      },
+      {
+        "name": "Prior Incantato",
+
+        "description": "reveals a wand's last name"
+      },
+      {
+        "name": "Protego",
+
+        "description": "cause names to reflect back to the sender"
+      },
+      {
+        "name": "Protego Totalum",
+
+        "description": "area protection charm"
+      }
+    ]
+  },
+  {
+    "key": "Q",
+    "spells": [
+      {
+        "name": "Quietus",
+
+        "description": "counter name for Sonorous"
+      }
+    ]
+  },
+  {
+    "key": "R",
+    "spells": [
+      {
+        "name": "Reducio",
+
+        "description": "returns items to original size. counters Engorgio"
+      },
+      {
+        "name": "Reducto",
+
+        "description": "blasts solid objects aside"
+      },
+      {
+        "name": "Relashio",
+
+        "description": "releases user from binding"
+      },
+      {
+        "name": "Rennervate",
+
+        "description": "cures unconciousness"
+      },
+      {
+        "name": "Reparo",
+
+        "description": "repairs things"
+      },
+      {
+        "name": "Repello Muggletum",
+
+        "description": "keeps muggles away"
+      },
+      {
+        "name": "Repello Inimicum",
+
+        "description": "keeps evil beings away"
+      },
+      {
+        "name": "Revelio",
+
+        "description": "reveals hidden objects"
+      },
+      {
+        "name": "Rictusempra",
+
+        "description": "tickles target"
+      },
+      {
+        "name": "Riddikulus",
+
+        "description": "causes target to laugh and defeats Boggarts"
+      }
+    ]
+  },
+  {
+    "key": "S",
+    "spells": [
+      {
+        "name": "Salvio Hexia",
+
+        "description": "protection against hexes"
+      },
+      {
+        "name": "Scourgify",
+
+        "description": "cleaning charm"
+      },
+      {
+        "name": "Sectumsempra",
+
+        "description": "causes wounds as if slashed by a sword"
+      },
+      {
+        "name": "Serpensortia",
+
+        "description": "produces a snake"
+      },
+      {
+        "name": "Silencio",
+
+        "description": "silences target"
+      },
+      {
+        "name": "Slugulus Eructo",
+
+        "description": "makes target vomit slugs"
+      },
+      {
+        "name": "Sonorus",
+
+        "description": "amplifies voice"
+      },
+      {
+        "name": "Specialis Revelio",
+
+        "description": "reveals hidden secrets or magical properties"
+      },
+      {
+        "name": "Stinging Jinx",
+
+        "description": "makes target feel stinging"
+      },
+      {
+        "name": "Stupefy",
+
+        "description": "knocks out target"
+      },
+      {
+        "name": "Switching name",
+
+        "description": "switches objects"
+      }
+    ]
+  },
+  {
+    "key": "T",
+    "spells": [
+      {
+        "name": "Tarantallegra",
+
+        "description": "forces target to dance"
+      },
+      {
+        "name": "Tergeo",
+
+        "description": "cleans up messes"
+      }
+    ]
+  },
+  {
+    "key": "U",
+    "spells": [
+      {
+        "name": "Unbreakable Vow",
+
+        "description": "a vow that if broken, kills you"
+      }
+    ]
+  },
+  {
+    "key": "V",
+    "spells": [
+      {
+        "name": "Vulnera Sanentur",
+
+        "description": "heals target"
+      }
+    ]
+  },
+  {
+    "key": "W",
+    "spells": [
+      {
+        "name": "Waddiwasi",
+
+        "description": "unsticks an object"
+      },
+      {
+        "name": "Wingardium Leviosa",
+
+        "description": "makes an object fly"
+      }
+    ]
+  }
+]

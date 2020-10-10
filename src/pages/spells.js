@@ -1,33 +1,28 @@
-import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
 import Page from "../components/page"
+import React from "react"
+import styled from "styled-components"
 import useAccordion from "../hooks/useAccordion"
 import Accordion from "../components/accordion"
+import { graphql } from "gatsby"
 
 const Title = styled.h1`
   margin-top: 2rem;
   padding: 0 1rem;
   color: white;
   font-weight: normal;
-`
-const Subtitle = styled.h2`
-  color: white;
-  font-weight: normal;
-  padding: 0 1rem;
   margin-bottom: 2rem;
 `
 
-const Characters = ({ data, uri }) => {
+export default function SpellsPage({ data, uri }) {
   const [openIndex, toggle] = useAccordion()
-  const allCharacters = data.allCharactersJson.edges.map(edge => edge.node)
+  const allSpells = data.allSpellsJson.edges.map(edge => edge.node)
+  console.log(data)
   return (
     <Page path={uri}>
-      <Title>CHARACTERS</Title>
-      <Subtitle>(by last name)</Subtitle>
-      {allCharacters.map((keyArray, index) => (
+      <Title>SPELLS</Title>
+      {allSpells.map((keyArray, index) => (
         <Accordion
-          data={keyArray.characters}
+          data={keyArray.spells}
           isOpen={openIndex === index}
           toggle={toggle}
           title={keyArray.key}
@@ -40,12 +35,12 @@ const Characters = ({ data, uri }) => {
 }
 
 export const pageQuery = graphql`
-  query CharactersPageQuery {
-    allCharactersJson {
+  query SpellsPageQuery {
+    allSpellsJson {
       edges {
         node {
           key
-          characters {
+          spells {
             description
             name
           }
@@ -54,5 +49,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default Characters

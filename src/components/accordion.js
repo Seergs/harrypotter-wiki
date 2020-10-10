@@ -22,6 +22,7 @@ const Title = styled(motion.div)`
   ${itemsCenter};
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  cursor: pointer;
 `
 const Letter = styled.span`
   font-size: 28px;
@@ -46,7 +47,7 @@ const Description = styled.p`
   padding: 0 1rem;
 `
 
-export default function Accordion({ isOpen, toggle, letter, data, index }) {
+export default function Accordion({ isOpen, toggle, title, data, index }) {
   return (
     <Wrapper>
       <Title
@@ -56,9 +57,8 @@ export default function Accordion({ isOpen, toggle, letter, data, index }) {
         }}
         onClick={() => toggle(index)}
       >
-        <Letter>{letter}</Letter>
+        <Letter>{title}</Letter>
         <motion.svg
-          initial={false}
           animate={{
             rotate: isOpen ? 0 : 180,
           }}
@@ -87,11 +87,11 @@ export default function Accordion({ isOpen, toggle, letter, data, index }) {
               stiffness: 2,
             }}
           >
-            {data.map(char => {
+            {data.map(item => {
               return (
-                <div key={char.name}>
-                  <Name>{char.name}</Name>
-                  <Description>{char.description}</Description>
+                <div key={item.name}>
+                  <Name>{item.name}</Name>
+                  <Description>{item.description}</Description>
                 </div>
               )
             })}

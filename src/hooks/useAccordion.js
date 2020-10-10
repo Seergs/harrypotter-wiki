@@ -1,4 +1,4 @@
-import { useState, useReducer } from "react"
+import { useState } from "react"
 
 function useAccordion() {
   const [openIndex, setOpenIndex] = useState(0)
