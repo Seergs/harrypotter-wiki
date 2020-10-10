@@ -15,8 +15,10 @@ const HousesWrapper = styled.div`
   ${flex};
   ${justifyAround};
   flex-wrap: wrap;
+  margin: 0 auto;
   margin-top: 4rem;
   gap: 1rem;
+  max-width: 900px;
 `
 const IndexPage = ({ data, uri }) => {
   const [houseModal, openModal, closeModal] = useModal()

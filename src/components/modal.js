@@ -18,12 +18,12 @@ const Content = styled(motion.div)`
   overflow-x: hidden;
   background-color: ${colors.ultraDarkPurple};
   top: 2rem;
-  left: 1rem;
-  right: 1rem;
+  left: 50%;
   bottom: 2rem;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+  max-width: 900px;
 `
 
 const CloseButton = styled.button`
@@ -102,9 +102,11 @@ const overlayVariants = {
 const contentVariants = {
   initial: {
     y: "-100%",
+    x: "-50%",
   },
   isOpen: {
     y: 0,
+    x: "-50%",
   },
   close: {
     y: "-100%",

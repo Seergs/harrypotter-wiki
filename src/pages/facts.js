@@ -6,6 +6,7 @@ import mixins from "../theme/mixins"
 import styled, { css } from "styled-components"
 import useRandomFact from "../hooks/useRandomFact"
 import { graphql } from "gatsby"
+import { mediaQueries } from "../theme/media_queries"
 
 const { flex, flexColumn, justifyCenter } = mixins
 const { colors } = theme
@@ -24,7 +25,14 @@ const Fact = styled.div`
   padding: 2rem 1rem;
   border-radius: 5px;
   color: ${colors.gray};
+  margin: 0 auto;
   margin-bottom: 2rem;
+  max-width: 900px;
+  line-height: 1.5;
+
+  ${mediaQueries("md")`
+    font-size: 26px;
+    `}
 `
 
 const LightningImage = styled.img`
@@ -41,6 +49,7 @@ const LightningImage = styled.img`
 `
 
 const Button = styled.button`
+  display: block;
   background-color: ${colors.lightPurple};
   border: 0;
   border-radius: 25px;
@@ -50,6 +59,8 @@ const Button = styled.button`
   height: 52px;
   cursor: pointer;
   transition: filter 0.1s ease-in-out;
+  max-width: 900px;
+  margin: 0 auto;
 
   &:hover {
     filter: brightness(1.1);

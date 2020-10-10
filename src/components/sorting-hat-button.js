@@ -3,6 +3,7 @@ import styled from "styled-components"
 import theme from "../theme/theme"
 import mixins from "../theme/mixins"
 import useSortingHat from "../hooks/useSortingHat"
+import { mediaQueries } from "../theme/media_queries"
 
 const { colors } = theme
 const { flex, itemsCenter, justifyCenter } = mixins
@@ -24,6 +25,10 @@ const Button = styled.button`
   &:hover {
     filter: brightness(1.1);
   }
+
+  ${mediaQueries("lg")`
+    font-size: 22px;
+  `}
 `
 
 const StyledLink = styled.span`
