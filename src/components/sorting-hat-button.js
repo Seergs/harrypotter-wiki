@@ -16,7 +16,7 @@ const Button = styled.button`
   margin: 0 auto;
   border: 0;
   padding: 15px 10px;
-  border-radius: 2px;
+  border-radius: 6px;
   margin-top: 3rem;
   color: white;
   font-size: 18px;
@@ -40,13 +40,21 @@ const Loading = styled.div`
   color: ${colors.gray};
   text-align: center;
   margin-top: 0.5rem;
+
+  ${mediaQueries("md")`
+    font-size: 22px;
+  `}
 `
 
 const Result = styled.div`
   font-size: 28px;
   text-align: center;
   color: white;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+
+  ${mediaQueries("md")`
+    font-size: 32px;
+  `}
 `
 
 export default function SortingHatButton() {
@@ -55,8 +63,8 @@ export default function SortingHatButton() {
     <>
       <Button onClick={getHouse}>
         <svg
-          width="86"
-          height="61"
+          width="50"
+          height="auto"
           viewBox="0 0 86 61"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

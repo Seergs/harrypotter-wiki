@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../theme/theme"
 import mixins from "../theme/mixins"
+import { mediaQueries } from "../theme/media_queries"
 import { motion, AnimatePresence } from "framer-motion"
 const { colors } = theme
 const { flex, justifyBetween, itemsCenter } = mixins
@@ -11,7 +12,9 @@ const Wrapper = styled.div`
   color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  margin: 0 auto;
   margin-bottom: 1rem;
+  max-width: 900px;
 `
 
 const Title = styled(motion.button)`
@@ -28,6 +31,9 @@ const Title = styled(motion.button)`
 `
 const Letter = styled.span`
   font-size: 28px;
+  ${mediaQueries("md")`
+  font-size: 32px;
+`}
 `
 const Container = styled(motion.div)`
   & > div:last-child p {
@@ -40,6 +46,10 @@ const Name = styled.div`
   padding: 0 1rem;
 
   padding-top: 1.5rem;
+
+  ${mediaQueries("md")`
+    font-size: 22px;
+  `}
 `
 
 const Description = styled.p`
@@ -47,6 +57,11 @@ const Description = styled.p`
   color: ${colors.gray};
   margin-top: 8px;
   padding: 0 1rem;
+  line-height: 1.5;
+
+  ${mediaQueries("md")`
+    font-size:20px;
+  `}
 `
 
 export default function Accordion({ isOpen, toggle, title, data, index }) {

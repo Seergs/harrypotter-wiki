@@ -65,6 +65,10 @@ const Button = styled.button`
   &:hover {
     filter: brightness(1.1);
   }
+
+  ${mediaQueries("md")`
+    font-size: 22px;  
+   `}
 `
 
 export default function Facts({ data, uri }) {
@@ -72,7 +76,7 @@ export default function Facts({ data, uri }) {
   const { displayedFact, getRandomFact } = useRandomFact(facts)
   return (
     <Page path={uri}>
-      <Title>Here you have a fun fact</Title>
+      <Title>Here you have a fun fact...</Title>
       <Fact>
         <LightningImage src={Lightning} alt="lightning" isLeft />
         {displayedFact}

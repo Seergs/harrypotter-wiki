@@ -3,6 +3,7 @@ import styled, { css } from "styled-components"
 import theme from "../theme/theme"
 import mixins from "../theme/mixins"
 import { AnimatePresence, motion } from "framer-motion"
+import { mediaQueries } from "../theme/media_queries"
 const { colors } = theme
 const { flex, justifyAround, justifyCenter, itemsCenter } = mixins
 
@@ -26,24 +27,46 @@ const ValuesContainer = styled.div`
   ${justifyAround};
   flex-wrap: wrap;
   row-gap: 0.5rem;
+  margin: 0 auto;
+  max-width: 500px;
+`
+
+const Value = styled.span`
+  ${mediaQueries("md")`
+    font-size: 20px;
+  `}
 `
 
 const Founder = styled.div`
   text-align: center;
-  margin: 1rem 0 2rem 0;
+  margin: 4rem 0 2rem 0;
   color: ${colors.gray};
+
+  ${mediaQueries("md")`
+    font-size: 20px;
+  `}
 `
 
 const Description = styled.p`
   color: ${colors.gray};
   line-height: 1.6;
+  ${mediaQueries("md")`
+    font-size: 20px;
+  `}
 `
 
 const HeadHouse = styled.div`
   text-align: center;
+
+  ${mediaQueries("md")`
+    font-size:20px;
+  `}
 `
 const Mascot = styled.div`
   text-align: center;
+  ${mediaQueries("md")`
+  font-size:20px; 
+    `}
 `
 
 const Colors = styled.div`
@@ -84,6 +107,9 @@ const SingleColor = styled.span<ColorProps>`
 `
 const Ghost = styled.div`
   text-align: center;
+  ${mediaQueries("md")`
+  font-size:20px;
+   `}
 `
 
 export default function House({ children }) {
@@ -104,7 +130,7 @@ House.Values = function ({ values }) {
       <HouseSubtitle>VALUES</HouseSubtitle>
       <ValuesContainer>
         {values.map(value => (
-          <span key={value}>{value}</span>
+          <Value key={value}>{value}</Value>
         ))}
       </ValuesContainer>
     </>

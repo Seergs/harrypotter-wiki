@@ -4,18 +4,22 @@ import styled from "styled-components"
 import Page from "../components/page"
 import useAccordion from "../hooks/useAccordion"
 import Accordion from "../components/accordion"
+import { mediaQueries } from "../theme/media_queries"
 
 const Title = styled.h1`
+  margin: 0 auto;
   margin-top: 2rem;
-  padding: 0 1rem;
   color: white;
   font-weight: normal;
+
+  max-width: 900px;
 `
 const Subtitle = styled.h2`
   color: white;
   font-weight: normal;
-  padding: 0 1rem;
+  margin: 0 auto;
   margin-bottom: 2rem;
+  max-width: 900px;
 `
 
 const Characters = ({ data, uri }) => {

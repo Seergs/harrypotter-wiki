@@ -6,11 +6,10 @@ import Accordion from "../components/accordion"
 import { graphql } from "gatsby"
 
 const Title = styled.h1`
-  margin-top: 2rem;
-  padding: 0 1rem;
   color: white;
   font-weight: normal;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
 `
 
 export default function SpellsPage({ data, uri }) {
@@ -19,7 +18,7 @@ export default function SpellsPage({ data, uri }) {
   console.log(data)
   return (
     <Page path={uri}>
-      <Title>SPELLS</Title>
+      <Title>ALL SPELLS</Title>
       {allSpells.map((keyArray, index) => (
         <Accordion
           data={keyArray.spells}

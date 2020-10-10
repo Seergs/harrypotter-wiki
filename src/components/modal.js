@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useRef } from "react"
 import theme from "../theme/theme"
 import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
+import useClickOutside from "../hooks/useClickOutside"
 const { colors } = theme
 
 const Overlay = styled(motion.div)`
@@ -18,12 +19,15 @@ const Content = styled(motion.div)`
   overflow-x: hidden;
   background-color: ${colors.ultraDarkPurple};
   top: 2rem;
-  left: 50%;
   bottom: 2rem;
-  padding: 1rem;
+  left: 0;
+  right: 0;
+  padding: 3rem 1rem;
   border-radius: 5px;
   box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
   max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
 `
 
 const CloseButton = styled.button`
@@ -43,6 +47,9 @@ const CloseButton = styled.button`
 `
 
 export default function Modal({ isOpen, onClose, children }) {
+  const ref = useRef()
+
+  useClickOutside(ref, onClose)
   return (
     <AnimatePresence>
       {isOpen && (
@@ -52,7 +59,7 @@ export default function Modal({ isOpen, onClose, children }) {
           animate="isOpen"
           exit="close"
         >
-          <Content variants={contentVariants}>
+          <Content variants={contentVariants} ref={ref}>
             <CloseButton onClick={onClose}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.39 20.39">
                 <title>close</title>
@@ -102,11 +109,9 @@ const overlayVariants = {
 const contentVariants = {
   initial: {
     y: "-100%",
-    x: "-50%",
   },
   isOpen: {
     y: 0,
-    x: "-50%",
   },
   close: {
     y: "-100%",
