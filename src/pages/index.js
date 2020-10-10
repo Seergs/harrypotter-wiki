@@ -24,6 +24,7 @@ const IndexPage = ({ data, uri }) => {
   const [houseModal, openModal, closeModal] = useModal()
 
   const houses = data.allHousesJson.edges.map(edge => edge.node)
+  const images = data.allImageSharp.edges.map(edge => edge.node.fluid)
 
   return (
     <>
@@ -33,6 +34,9 @@ const IndexPage = ({ data, uri }) => {
             <HouseCard
               key={house.houseName}
               name={house.houseName}
+              image={images.find(image =>
+                image.originalName.includes(house.houseName)
+              )}
               onClick={() =>
                 openModal(
                   houses.find(
@@ -77,6 +81,16 @@ export const pageQuery = graphql`
           colors
           mascot
           values
+        }
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          fluid(maxWidth: 200) {
+            originalName
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }

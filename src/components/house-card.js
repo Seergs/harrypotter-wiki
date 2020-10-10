@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { mediaQueries } from "../theme/media_queries"
+import Image from "gatsby-image"
 const Card = styled.button`
   height: 200px;
   width: 150px;
@@ -23,10 +24,11 @@ const CardTitle = styled.div`
   text-align: center;
 `
 
-export default function HouseCard({ name, onClick }) {
+export default function HouseCard({ name, onClick, image }) {
   return (
     <Card onClick={onClick}>
       <CardTitle>{name}</CardTitle>
+      <Image fluid={image} />
     </Card>
   )
 }

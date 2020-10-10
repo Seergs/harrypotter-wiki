@@ -8,6 +8,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-styled-components",
     "gatsby-transformer-json",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,6 +22,13 @@ module.exports = {
       options: {
         fonts: [`ruluko`],
         display: `swap`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: `${__dirname}/src/assets`,
       },
     },
   ],
