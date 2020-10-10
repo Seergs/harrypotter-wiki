@@ -4,7 +4,6 @@ import styled from "styled-components"
 import Page from "../components/page"
 import useAccordion from "../hooks/useAccordion"
 import Accordion from "../components/accordion"
-import { mediaQueries } from "../theme/media_queries"
 
 const Title = styled.h1`
   margin: 0 auto;

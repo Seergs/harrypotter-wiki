@@ -2,7 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 import theme from "../theme/theme"
 import mixins from "../theme/mixins"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import { mediaQueries } from "../theme/media_queries"
 const { colors } = theme
 const { flex, justifyAround, justifyCenter, itemsCenter } = mixins
