@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-transformer-json",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-netlify",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,6 +30,24 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Harry Potter WIKI`,
+        short_name: `HP wiki`,
+        start_url: `/`,
+        background_color: "#ffffff",
+        theme_color: "#190F27",
+        display: "standalone",
+        icon: `src/assets/icon.svg`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachedPages: [`/`, `/characters`, `/spells`, `/facts`],
       },
     },
   ],

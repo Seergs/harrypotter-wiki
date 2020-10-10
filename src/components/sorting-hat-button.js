@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../theme/theme"
-import mixins from "../theme/mixins"
 import useSortingHat from "../hooks/useSortingHat"
 import { mediaQueries } from "../theme/media_queries"
+import mixins from "../theme/mixins"
+import theme from "../theme/theme"
 
 const { colors } = theme
 const { flex, itemsCenter, justifyCenter } = mixins

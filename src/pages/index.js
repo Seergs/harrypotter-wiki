@@ -1,13 +1,13 @@
+import { graphql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import Page from "../components/page"
-import HouseCard from "../components/house-card"
-import SortingButton from "../components/sorting-hat-button"
-import mixins from "../theme/mixins"
-import useModal from "../hooks/useModal"
-import Modal from "../components/modal"
 import House from "../components/house"
-import { graphql } from "gatsby"
+import HouseCard from "../components/house-card"
+import Modal from "../components/modal"
+import Page from "../components/page"
+import SortingButton from "../components/sorting-hat-button"
+import useModal from "../hooks/useModal"
+import mixins from "../theme/mixins"
 
 const { flex, justifyAround } = mixins
 

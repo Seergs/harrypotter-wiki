@@ -1,9 +1,9 @@
+import { AnimatePresence, motion } from "framer-motion"
+import { Link } from "gatsby"
 import React from "react"
 import styled, { css } from "styled-components"
-import theme from "../theme/theme"
-import { motion, AnimatePresence } from "framer-motion"
 import mixins from "../theme/mixins"
-import { Link } from "gatsby"
+import theme from "../theme/theme"
 
 const { flex, flexColumn } = mixins
 

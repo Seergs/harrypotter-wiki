@@ -1,8 +1,8 @@
+import { AnimatePresence, motion } from "framer-motion"
 import React, { useRef } from "react"
-import theme from "../theme/theme"
 import styled from "styled-components"
-import { motion, AnimatePresence } from "framer-motion"
 import useClickOutside from "../hooks/useClickOutside"
+import theme from "../theme/theme"
 const { colors } = theme
 
 const Overlay = styled(motion.div)`

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../theme/theme"
 import useNavigation from "../hooks/useNavigation"
+import theme from "../theme/theme"
 import Navigation from "./navigation"
 
 const { colors } = theme

@@ -1,9 +1,9 @@
-import React from "react"
 import { graphql } from "gatsby"
+import React from "react"
 import styled from "styled-components"
+import Accordion from "../components/accordion"
 import Page from "../components/page"
 import useAccordion from "../hooks/useAccordion"
-import Accordion from "../components/accordion"
 
 const Title = styled.h1`
   margin: 0 auto;

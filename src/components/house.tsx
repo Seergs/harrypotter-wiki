@@ -1,9 +1,9 @@
+import { AnimatePresence } from "framer-motion"
 import React from "react"
 import styled, { css } from "styled-components"
-import theme from "../theme/theme"
-import mixins from "../theme/mixins"
-import { AnimatePresence } from "framer-motion"
 import { mediaQueries } from "../theme/media_queries"
+import mixins from "../theme/mixins"
+import theme from "../theme/theme"
 const { colors } = theme
 const { flex, justifyAround, justifyCenter, itemsCenter } = mixins
 

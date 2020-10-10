@@ -1,9 +1,9 @@
-import Page from "../components/page"
+import { graphql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import useAccordion from "../hooks/useAccordion"
 import Accordion from "../components/accordion"
-import { graphql } from "gatsby"
+import Page from "../components/page"
+import useAccordion from "../hooks/useAccordion"
 
 const Title = styled.h1`
   color: white;

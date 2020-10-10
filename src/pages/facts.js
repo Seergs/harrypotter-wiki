@@ -1,12 +1,12 @@
-import React from "react"
-import Page from "../components/page"
-import Lightning from "../assets/lightning.png"
-import theme from "../theme/theme"
-import mixins from "../theme/mixins"
-import styled, { css } from "styled-components"
-import useRandomFact from "../hooks/useRandomFact"
 import { graphql } from "gatsby"
+import React from "react"
+import styled, { css } from "styled-components"
+import Lightning from "../assets/lightning.png"
+import Page from "../components/page"
+import useRandomFact from "../hooks/useRandomFact"
 import { mediaQueries } from "../theme/media_queries"
+import mixins from "../theme/mixins"
+import theme from "../theme/theme"
 
 const { flex, flexColumn, justifyCenter } = mixins
 const { colors } = theme

@@ -1,8 +1,8 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import Hamburger from "./hamburger"
 import mixins from "../theme/mixins"
-import { Link } from "gatsby"
+import Hamburger from "./hamburger"
 
 const { justifyBetween, flex, itemsCenter } = mixins
 

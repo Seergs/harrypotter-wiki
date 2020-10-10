@@ -1,7 +1,7 @@
+import Image from "gatsby-image"
 import React from "react"
 import styled from "styled-components"
 import { mediaQueries } from "../theme/media_queries"
-import Image from "gatsby-image"
 import theme from "../theme/theme"
 const { colors } = theme
 const Card = styled.button`
