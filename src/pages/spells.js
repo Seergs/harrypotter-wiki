@@ -15,7 +15,6 @@ const Title = styled.h1`
 export default function SpellsPage({ data, uri }) {
   const [openIndex, toggle] = useAccordion()
   const allSpells = data.allSpellsJson.edges.map(edge => edge.node)
-  console.log(data)
   return (
     <Page path={uri}>
       <Title>ALL SPELLS</Title>
