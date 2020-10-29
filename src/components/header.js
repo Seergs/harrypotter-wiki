@@ -26,7 +26,7 @@ const Header = ({ path }) => (
     <LogoWrapper to="/">
       <svg
         width="120"
-        height="auto"
+        height="100%"
         viewBox="0 0 185 55"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

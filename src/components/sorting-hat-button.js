@@ -64,7 +64,7 @@ export default function SortingHatButton() {
       <Button onClick={getHouse}>
         <svg
           width="50"
-          height="auto"
+          height="100%"
           viewBox="0 0 86 61"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
